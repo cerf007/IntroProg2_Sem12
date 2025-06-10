@@ -13,15 +13,16 @@
 
 mi_ruta = 'C:\\Users\\user\\Documents\\Archivos\\'
 archivo = open(mi_ruta + 'compras.txt', 'w')
-lista = []
 
 while True:
-    compra = input("Ingrese el producto: ")
-    lista.append(compra)
-    archivo.write(compra)
+    compra = input("Ingrese el producto [Escriba 'fin' para terminar]: ")
     
-    if compra == 'fin':
-        print("La lista ha finalizado")
+    if compra.lower() == 'fin':
+        print("La lista ha finalizado.")
         break
+    else:
+        archivo.write(compra + '\n')
+
+archivo.close()
     
     
