@@ -17,7 +17,8 @@ import datetime
 directorio = "C:\\Users\\user\\Documents\\Archivos\\"
 diario = open(directorio + "diario.txt", "a")
 texto = input("Ingrese el texto: ")
-diario.append(datetime.datetime.now, "\n", texto)
-diario.close
+fecha_hora = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+diario.write(f"{fecha_hora}, \n, {texto}\n\n")
+diario.close()
 
 print("Se ha actualizado el diario")
