@@ -20,6 +20,7 @@ try:
     cantidad_lineas = len(lineas)
     
     print(f"El número de líneas del archivo {nombre_archivo} es de {cantidad_lineas}")
+    archivo.close
     
 except FileNotFoundError:
     print("Archivo no encontrado")
